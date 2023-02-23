@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:7.0.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:18.2.0"],\
+            ["react-icons", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:4.7.1"],\
             ["react-scripts", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:5.0.1"],\
             ["uuid", "npm:9.0.0"],\
             ["web-vitals", "npm:2.1.4"]\
@@ -11854,6 +11855,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:7.0.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:18.2.0"],\
+            ["react-icons", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:4.7.1"],\
             ["react-scripts", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:5.0.1"],\
             ["uuid", "npm:9.0.0"],\
             ["web-vitals", "npm:2.1.4"]\
@@ -14576,6 +14578,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-error-overlay-npm-6.0.11-021cdeaa92-ce7b44c38f.zip/node_modules/react-error-overlay/",\
           "packageDependencies": [\
             ["react-error-overlay", "npm:6.0.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-icons", [\
+        ["npm:4.7.1", {\
+          "packageLocation": "./.yarn/cache/react-icons-npm-4.7.1-27c284b383-ed3cbdc5fc.zip/node_modules/react-icons/",\
+          "packageDependencies": [\
+            ["react-icons", "npm:4.7.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:4.7.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-icons-virtual-280afed500/0/cache/react-icons-npm-4.7.1-27c284b383-ed3cbdc5fc.zip/node_modules/react-icons/",\
+          "packageDependencies": [\
+            ["react-icons", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:4.7.1"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
