@@ -1,0 +1,38 @@
+.bucket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  margin: 0.1rem 0rem;
+  color: var(--color-text);
+}
+
+.checkbox {
+  width: 1.1rem;
+  height: 1.1rem;
+  appearance: none;
+  border: 1px solid #999;
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--color-accent);
+  border: none;
+}
+
+.bucketText {
+  flex: 1 1 0%;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.trashIcon {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-delete);
+  border-radius: 50%;
+}
+
+.trash {
+  margin-left: 2px;
+  background-color: transparent;
+}

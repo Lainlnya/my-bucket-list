@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import styles from './AddBucket.module.css';
 
 export default function AddBucket({ onAdd }) {
   const [text, setText] = useState('');
@@ -12,14 +13,15 @@ export default function AddBucket({ onAdd }) {
   };
 
   return (
-    <form onSubmit={handleSumbit}>
+    <form className={styles.form} onSubmit={handleSumbit}>
       <input
+        className={styles.addBucket}
         type="text"
         placeholder="Add Bucket"
         value={text}
         onChange={handleChange}
       />
-      <button>Add</button>
+      <button className={styles.button}>Add</button>
     </form>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddBucket from '../AddBucket/AddBucket';
 import Bucket from '../Bucket/Bucket';
+import styles from './BucketList.module.css';
 
 export default function BucketList({ filter }) {
   const [buckets, setBuckets] = useState([
@@ -24,8 +25,8 @@ export default function BucketList({ filter }) {
 
   return (
     <>
-      <section>
-        <ul>
+      <section className={styles.bucketlist}>
+        <ul className={styles.list}>
           {filtered.map((item) => (
             <Bucket
               key={item.id}

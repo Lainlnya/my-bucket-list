@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.h1 {
+  text-align: center;
+  color: var(--color-text);
+}
+
+.ul {
+  flex: content;
+  background-color: var(--color-accent);
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.button {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button.selected::after {
+  content: '';
+  display: block;
+  margin-top: 0.2rem;
+  border: 2px solid #fbfbf9;
+}

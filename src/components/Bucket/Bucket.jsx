@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import styles from './Bucket.module.css';
 
 export default function Bucket({ bucket, onUpdate, onDelete }) {
   const { text, status } = bucket;
@@ -13,17 +14,22 @@ export default function Bucket({ bucket, onUpdate, onDelete }) {
   };
 
   return (
-    <li>
+    <li className={styles.bucket}>
       <input
         type="checkbox"
         id="checkbox"
+        className={styles.checkbox}
         checked={status === 'completed'}
         onChange={handleChange}
       />
-      <label htmlFor="checkbox">{text}</label>
-      <button onClick={handleDelete}>
-        <FaTrashAlt />
-      </button>
+      <label className={styles.bucketText} htmlFor="checkbox">
+        {text}
+      </label>
+      <span className={styles.trashIcon}>
+        <button className={styles.trash} onClick={handleDelete}>
+          <FaTrashAlt />
+        </button>
+      </span>
     </li>
   );
 }

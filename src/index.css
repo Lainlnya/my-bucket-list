@@ -1,13 +1,56 @@
+:root {
+  --color-bg-dark: #fdfdfd;
+  --color-text: #22243b;
+  --color-accent: #fbc0bc;
+  --color-delete: #c3e3ff;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Gowun Batang', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 30%;
+  height: 90%;
+  min-width: 400px;
+  background-image: url(/public/bucket.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input {
+  font-family: 'Gowun Batang', serif;
+}
+
+button {
+  font-family: 'Gowun Batang', serif;
+  outline: none;
+  border: none;
 }
