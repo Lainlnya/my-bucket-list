@@ -1,8 +1,11 @@
 :root {
-  --color-bg-dark: #fdfdfd;
+  --color-bg-white: #fdfdfd;
+  --color-bg-dark: #3d3c41;
   --color-text: #22243b;
   --color-accent: #fbc0bc;
+  --color-accent-dark: #fe8e6b;
   --color-delete: #c3e3ff;
+  --color-delete-dark: #78bbcc;
 }
 
 body {

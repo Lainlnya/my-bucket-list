@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import AddBucket from '../AddBucket/AddBucket';
 import Bucket from '../Bucket/Bucket';
 import styles from './BucketList.module.css';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function BucketList({ filter }) {
   const [buckets, setBuckets] = useState([
     { id: '123', text: '스카이다이빙', status: 'active' },
     { id: '124', text: '금융지식', status: 'active' },
   ]);
+  const { darkMode } = useContext(DarkModeContext);
 
   const handleAdd = (bucket) => setBuckets([...buckets, bucket]);
 
@@ -25,7 +27,11 @@ export default function BucketList({ filter }) {
 
   return (
     <>
-      <section className={styles.bucketlist}>
+      <section
+        className={`${styles.bucketlist}  ${
+          darkMode === true && styles.darkMode
+        }`}
+      >
         <ul className={styles.list}>
           {filtered.map((item) => (
             <Bucket

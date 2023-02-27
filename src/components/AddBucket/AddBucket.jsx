@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './AddBucket.module.css';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function AddBucket({ onAdd }) {
   const [text, setText] = useState('');
+  const { darkMode } = useContext(DarkModeContext);
+
   const handleChange = (e) => setText(e.target.value);
   const handleSumbit = (e) => {
     e.preventDefault();
@@ -13,7 +16,10 @@ export default function AddBucket({ onAdd }) {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSumbit}>
+    <form
+      className={`${styles.form} ${darkMode === true && styles.darkMode}`}
+      onSubmit={handleSumbit}
+    >
       <input
         className={styles.addBucket}
         type="text"
@@ -21,7 +27,11 @@ export default function AddBucket({ onAdd }) {
         value={text}
         onChange={handleChange}
       />
-      <button className={styles.button}>Add</button>
+      <button
+        className={`${styles.button} ${darkMode === true && styles.darkMode}`}
+      >
+        Add
+      </button>
     </form>
   );
 }

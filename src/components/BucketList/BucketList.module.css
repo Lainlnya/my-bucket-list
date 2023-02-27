@@ -5,6 +5,10 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bg-white);
+}
+
+.bucketlist.darkMode {
   background-color: var(--color-bg-dark);
 }
 

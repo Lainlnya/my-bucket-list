@@ -16,14 +16,22 @@ header {
   padding: 0.3rem 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   margin: 0;
+}
+
+.ul.darkMode {
+  background-color: var(--color-accent-dark);
 }
 
 .button {
   font-size: 0.8rem;
   text-transform: capitalize;
   background-color: transparent;
+}
+
+.button.dark {
+  flex: auto 0%;
+  text-align: start;
 }
 
 .button:hover {
