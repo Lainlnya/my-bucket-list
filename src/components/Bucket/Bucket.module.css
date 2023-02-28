@@ -14,9 +14,13 @@
   border: 1px solid #999;
 }
 
-input[type='checkbox']:checked {
+.checkbox:checked {
   background-color: var(--color-accent);
   border: none;
+}
+
+.checkbox.darkMode:checked {
+  background-color: var(--color-accent-dark);
 }
 
 .bucketText {

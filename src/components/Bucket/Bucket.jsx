@@ -21,7 +21,7 @@ export default function Bucket({ bucket, onUpdate, onDelete }) {
       <input
         type="checkbox"
         id="checkbox"
-        className={styles.checkbox}
+        className={`${styles.checkbox} ${darkMode === true && styles.darkMode}`}
         checked={status === 'completed'}
         onChange={handleChange}
       />

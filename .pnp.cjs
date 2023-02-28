@@ -32,10 +32,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:13.5.0"],\
             ["eslint-config-react-app", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:7.0.1"],\
+            ["immer", "npm:9.0.19"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:18.2.0"],\
             ["react-icons", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:4.7.1"],\
             ["react-scripts", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:5.0.1"],\
+            ["use-immer", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:0.8.1"],\
             ["uuid", "npm:9.0.0"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
@@ -11853,10 +11855,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:13.5.0"],\
             ["eslint-config-react-app", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:7.0.1"],\
+            ["immer", "npm:9.0.19"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:18.2.0"],\
             ["react-icons", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:4.7.1"],\
             ["react-scripts", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:5.0.1"],\
+            ["use-immer", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:0.8.1"],\
             ["uuid", "npm:9.0.0"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
@@ -16603,6 +16607,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["url-parse", "npm:1.5.10"],\
             ["querystringify", "npm:2.2.0"],\
             ["requires-port", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["use-immer", [\
+        ["npm:0.8.1", {\
+          "packageLocation": "./.yarn/cache/use-immer-npm-0.8.1-2cf589888f-9ffc1a201a.zip/node_modules/use-immer/",\
+          "packageDependencies": [\
+            ["use-immer", "npm:0.8.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:0.8.1", {\
+          "packageLocation": "./.yarn/__virtual__/use-immer-virtual-d834255e0d/0/cache/use-immer-npm-0.8.1-2cf589888f-9ffc1a201a.zip/node_modules/use-immer/",\
+          "packageDependencies": [\
+            ["use-immer", "virtual:3750a49c4d49e5d5b6643ad1a613d03ec1285b218156e04a1d63978824a7ef82ed4635fa230fade248d020564f091b9404fd207a92d6ddfa4b366684270548c9#npm:0.8.1"],\
+            ["@types/immer", null],\
+            ["@types/react", null],\
+            ["immer", "npm:9.0.19"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/immer",\
+            "@types/react",\
+            "immer",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
