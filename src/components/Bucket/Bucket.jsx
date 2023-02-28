@@ -5,7 +5,7 @@ import styles from './Bucket.module.css';
 import { useContext } from 'react';
 
 export default function Bucket({ bucket, onUpdate, onDelete }) {
-  const { text, status } = bucket;
+  const { id, text, status } = bucket;
   const { darkMode } = useContext(DarkModeContext);
   const handleChange = (e) => {
     const status = e.target.checked ? 'completed' : 'active';
@@ -20,7 +20,7 @@ export default function Bucket({ bucket, onUpdate, onDelete }) {
     <li className={styles.bucket}>
       <input
         type="checkbox"
-        id="checkbox"
+        id={id}
         className={`${styles.checkbox} ${darkMode === true && styles.darkMode}`}
         checked={status === 'completed'}
         onChange={handleChange}
@@ -29,7 +29,7 @@ export default function Bucket({ bucket, onUpdate, onDelete }) {
         className={`${styles.bucketText} ${
           darkMode === true && styles.darkMode
         }`}
-        htmlFor="checkbox"
+        htmlFor={id}
       >
         {text}
       </label>
