@@ -1,11 +1,15 @@
 :root {
-  --color-bg-white: #fdfdfd;
-  --color-bg-dark: #3d3c41;
+  --color-bg: #fdfdfd;
   --color-text: #22243b;
   --color-accent: #fbc0bc;
-  --color-accent-dark: #fe8e6b;
   --color-delete: #c3e3ff;
-  --color-delete-dark: #78bbcc;
+}
+
+html.dark {
+  --color-bg: #3d3c41;
+  --color-text: #fdfdfd;
+  --color-accent: #fe8e6b;
+  --color-delete: #78bbcc;
 }
 
 body {

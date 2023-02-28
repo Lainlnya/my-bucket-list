@@ -7,7 +7,7 @@ header {
 
 .h1 {
   text-align: center;
-  color: var(--color-text);
+  color: #22243b;
 }
 
 .ul {
@@ -17,10 +17,6 @@ header {
   display: flex;
   flex-direction: row;
   margin: 0;
-}
-
-.ul.darkMode {
-  background-color: var(--color-accent-dark);
 }
 
 .button {

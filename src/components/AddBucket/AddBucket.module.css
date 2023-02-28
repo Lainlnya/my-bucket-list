@@ -6,10 +6,6 @@
   background-color: var(--color-accent);
 }
 
-.form.darkMode {
-  background-color: var(--color-accent-dark);
-}
-
 .addBucket {
   flex: 1 0 auto;
   font-size: 1rem;
@@ -26,10 +22,6 @@
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1rem;
-}
-
-.button.darkMode {
-  background-color: var(--color-delete-dark);
 }
 
 .button:hover {

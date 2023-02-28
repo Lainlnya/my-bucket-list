@@ -1,12 +1,9 @@
 import React from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
-import { DarkModeContext } from '../../context/DarkModeContext';
 import styles from './Bucket.module.css';
-import { useContext } from 'react';
 
 export default function Bucket({ bucket, onUpdate, onDelete }) {
   const { id, text, status } = bucket;
-  const { darkMode } = useContext(DarkModeContext);
   const handleChange = (e) => {
     const status = e.target.checked ? 'completed' : 'active';
     onUpdate({ ...bucket, status });
@@ -21,23 +18,14 @@ export default function Bucket({ bucket, onUpdate, onDelete }) {
       <input
         type="checkbox"
         id={id}
-        className={`${styles.checkbox} ${darkMode === true && styles.darkMode}`}
+        className={styles.checkbox}
         checked={status === 'completed'}
         onChange={handleChange}
       />
-      <label
-        className={`${styles.bucketText} ${
-          darkMode === true && styles.darkMode
-        }`}
-        htmlFor={id}
-      >
+      <label className={styles.bucketText} htmlFor={id}>
         {text}
       </label>
-      <span
-        className={`${styles.trashIcon} ${
-          darkMode === true && styles.darkMode
-        }`}
-      >
+      <span className={styles.trashIcon}>
         <button className={styles.trash} onClick={handleDelete}>
           <FaTrashAlt />
         </button>

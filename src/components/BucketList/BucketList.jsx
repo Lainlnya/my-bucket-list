@@ -1,35 +1,16 @@
-import React, { useContext, useEffect } from 'react';
-import { useImmer } from 'use-immer';
+import React, { useState, useEffect } from 'react';
 import AddBucket from '../AddBucket/AddBucket';
 import Bucket from '../Bucket/Bucket';
 import styles from './BucketList.module.css';
-import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function BucketList({ filter }) {
-  const [buckets, setBuckets] = useImmer([]);
-  const { darkMode } = useContext(DarkModeContext);
+  const [buckets, setBuckets] = useState(() => readBuckets());
 
   useEffect(() => {
-    if (localStorage.length !== 0) {
-      for (let i = 0; i < localStorage.length; i++) {
-        let bucket = JSON.parse(localStorage.getItem(localStorage.key(i)));
-        setBuckets((buckets) => {
-          buckets.push(bucket);
-        });
-      }
-    }
-  }, []);
+    localStorage.setItem('buckets', JSON.stringify(buckets));
+  }, [buckets]);
 
   const handleAdd = (bucket) => {
-    localStorage.setItem(
-      bucket.id,
-      JSON.stringify({
-        id: bucket.id,
-        text: bucket.text,
-        status: 'active',
-      })
-    );
-
     setBuckets([...buckets, bucket]);
   };
 
@@ -37,30 +18,17 @@ export default function BucketList({ filter }) {
     setBuckets(
       buckets.map((bucket) => (bucket.id === updated.id ? updated : bucket))
     );
-    localStorage.setItem(
-      updated.id,
-      JSON.stringify({
-        id: updated.id,
-        text: updated.text,
-        status: updated.status,
-      })
-    );
   };
 
   const handleDelete = (deleted) => {
     setBuckets(buckets.filter((b) => b.id !== deleted.id));
-    localStorage.removeItem(deleted.id);
   };
 
   const filtered = getFilterItems(buckets, filter);
 
   return (
     <>
-      <section
-        className={`${styles.bucketlist}  ${
-          darkMode === true && styles.darkMode
-        }`}
-      >
+      <section className={styles.bucketlist}>
         <ul className={styles.list}>
           {filtered.map((item) => (
             <Bucket
@@ -80,4 +48,9 @@ const getFilterItems = (buckets, filter) => {
   if (filter === 'all') return buckets;
 
   return buckets.filter((bucket) => bucket.status === filter);
+};
+
+const readBuckets = () => {
+  let buckets = localStorage.getItem('buckets');
+  return buckets ? JSON.parse(buckets) : [];
 };

@@ -19,8 +19,8 @@
   border: none;
 }
 
-.checkbox.darkMode:checked {
-  background-color: var(--color-accent-dark);
+.checkbox.dark:checked {
+  background-color: var(--color-accent);
 }
 
 .bucketText {
@@ -29,19 +29,11 @@
   font-size: 1.1rem;
 }
 
-.bucketText.darkMode {
-  color: var(--color-bg-white);
-}
-
 .trashIcon {
   width: 30px;
   height: 30px;
   background-color: var(--color-delete);
   border-radius: 50%;
-}
-
-.trashIcon.darkMode {
-  background-color: var(--color-delete-dark);
 }
 
 .trashIcon:hover,
